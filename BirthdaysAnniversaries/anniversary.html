@@ -15,14 +15,19 @@
             columns: 250px auto;
         }
         
+        a{
+            text-decoration: none;
+        }
+
         li{
-            margin: 4px 0px;
+            margin: 0;
+            margin-bottom: 8px;
             box-shadow: 3px 3px 7px -4px rgba(173,173,173,1);
             page-break-inside: avoid;
             background-color: white;
             border-radius: 2px;
         }
-        
+
         .person-email{
             margin-top: auto;
             margin-bottom: auto;
@@ -31,12 +36,12 @@
         }
         
         .ms-Persona-details{
-            padding: 0px 8px;
+            padding:0px 8px;
         }
-        
+
         .ms-Persona-primaryText{
             font-size: 14px;
-            color: #373737 ;
+            color: #373737;
             margin: 0;
             padding: 0;
             margin-bottom: 8px;
@@ -63,25 +68,19 @@
         .pnp-persona{
             position:relative;
             float:left;
-            width:80%;
-            height:100%;
-        }
-        
-        a{
-            text-decoration: none;
-            text-overflow: ellipsis;
-            white-space: nowrap !important;
-            display: inline-block;
-            overflow:hidden;
+            max-width:80%;
         }
         
         .anniversary{
-            font-size: 15px;
-            color: #555555;
+            font-size: 14px;
+            color: #373737;
             position:absolute;
             top:0%;
             left: 100px;
             white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow:hidden;
+            display: inline-block;
         }
 
     </style>
@@ -125,9 +124,10 @@
                         data-is-selected="{{isItemSelected @root.selectedKeys @index}}">
 
                         <template id="content">
-                            {{#eq (slot item @root.slots.IsBirthday) '1'}}
+                            {{#eq (slot item @root.slots.IsBirthday) '0'}}
                             <li class="template--peopleListItem" tabindex="0">
                                 {{#> resultTypes item=item}}
+
                                     {{#and @root.properties.layoutProperties.showPersonaCard (slot item @root.slots.PersonQuery)}}
                                         <mgt-person user-id="{{getUserEmail (slot item @root.slots.PersonQuery)}}" person-card="hover">
                                             <template>
@@ -147,7 +147,7 @@
                                             </template>
                                         </mgt-person>
                                     {{else}}
-                                    <div class = 'pnp-persona'>
+                                    <div class='pnp-persona'>
                                         <mgt-person user-id="{{slot item @root.slots.WorkEmail}}" person-card="hover">
                                             <template>
                                                 <a href="https://pixelmilldev-my.sharepoint.com/_layouts/15/me.aspx/?p={{slot item @root.slots.WorkEmail}}&v=work" target="_blank" class="a-wrapper">
@@ -167,6 +167,9 @@
                                                 </mgt-person-card>
                                             </template>
                                         </mgt-person>
+                                        <div class = 'anniversary'>
+                                                | {{subtract (date today "YYYY") (getDate (slot item @root.slots.EventDate) "YYYY")}} years
+                                        </div>
                                     </div>
                                     <div class = "person-email">
                                         <a href = "mailto:{{slot item @root.slots.WorkEmail}}"><img class="mail-icon" src = "https://i.ibb.co/d7t09gm/Microsoft-Teams-image.png"/></a>
@@ -182,7 +185,7 @@
                 {{/each}}
             </ul>
         </div>
-        
+
 
         {{#if @root.properties.paging.showPaging}}
 
