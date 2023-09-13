@@ -1,1 +1,713 @@
-
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
+  "hideSelection": true,
+  "hideListHeader": true,
+  "rowFormatter": {
+    "elmType": "div",
+    "style": {
+      "border-bottom-style": "solid",
+      "border-bottom-width": "1px",
+      "border-color": "darkgrey",
+      "padding": "1em 0",
+      "display": "flexbox",
+      "width": "50vh"
+    },
+    "attributes": {
+      "class": "ms-borderColor-neutralLight ms-font-m ms-fontColor-neutralPrimary"
+    },
+    "children": [
+      {
+        "elmType": "img",
+        "attributes": {
+          "src": {
+            "operator": "+",
+            "operands": [
+              "/_layouts/15/userphoto.aspx?size=M&username=",
+              "[$EMail]"
+            ]
+          }
+        },
+        "style": {
+          "border-radius": "75%",
+          "height": "auto",
+          "max-width": "65px",
+          "margin": "0",
+          "margin-right": "15px",
+          "padding": "5px"
+        }
+      },
+      {
+        "elmType": "div",
+        "style": {
+          "display": "inline-block",
+          "height": "100%"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "txtContent": "[$FullName]",
+            "attributes": {
+              "class": "ms-fontColor-themePrimary ms-font-l"
+            },
+            "style": {
+              "font-weight": "600",
+              "cursor": "pointer"
+            },
+            "customCardProps": {
+              "formatter": {
+                "elmType": "div",
+                "children": [
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$FullName]",
+                            "style": {
+                              "flex-grow": "1",
+                              "color": "black",
+                              "font-size": "18px",
+                              "font-weight": "600",
+                              "white-space": "initial",
+                              "margin": "7px 0"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$Company]",
+                            "style": {
+                              "flex-grow": "1",
+                              "color": "#4a4a4a",
+                              "white-space": "initial",
+                              "margin-bottom": "7px"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$JobTitle]",
+                            "style": {
+                              "flex-grow": "1",
+                              "color": "#4a4a4a",
+                              "white-space": "initial",
+                              "margin-bottom": "15px"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "style": {
+                      "border-bottom": "1px solid lightgray",
+                      "margin-bottom": "17px"
+                    }
+                  },
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%",
+                          "margin-bottom": "17px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "attributes": {
+                              "iconName": "Phone",
+                              "class": "ms-fontColor-neutralPrimary"
+                            },
+                            "style": {
+                              "font-size": "16px",
+                              "margin": "auto 20px auto 0",
+                              "opacity": "0.75"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "style": {
+                              "flex-grow": "1",
+                              "display": "inline-block"
+                            },
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "Business Phone",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$WorkPhone]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%",
+                          "margin-bottom": "17px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "attributes": {
+                              "iconName": "Phone",
+                              "class": "ms-fontColor-neutralPrimary"
+                            },
+                            "style": {
+                              "font-size": "16px",
+                              "margin": "auto 20px auto 0",
+                              "opacity": "0.75"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "style": {
+                              "flex-grow": "1",
+                              "display": "inline-block"
+                            },
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "Home Phone",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$HomePhone]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%",
+                          "margin-bottom": "17px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "attributes": {
+                              "iconName": "CellPhone",
+                              "class": "ms-fontColor-neutralPrimary"
+                            },
+                            "style": {
+                              "font-size": "16px",
+                              "margin": "auto 20px auto 0",
+                              "opacity": "0.75"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "style": {
+                              "flex-grow": "1",
+                              "display": "inline-block"
+                            },
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "Mobile Phone",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$CellPhone]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "style": {
+                              "display": "flex",
+                              "width": "100%",
+                              "margin-bottom": "17px"
+                            },
+                            "children": [
+                              {
+                                "elmType": "span",
+                                "attributes": {
+                                  "iconName": "Fax",
+                                  "class": "ms-fontColor-neutralPrimary"
+                                },
+                                "style": {
+                                  "font-size": "16px",
+                                  "margin": "auto 20px auto 0",
+                                  "opacity": "0.75"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "style": {
+                                  "flex-grow": "1",
+                                  "display": "inline-block"
+                                },
+                                "children": [
+                                  {
+                                    "elmType": "div",
+                                    "txtContent": "Fax",
+                                    "style": {
+                                      "font-size": "12px",
+                                      "color": "#4a4a4a",
+                                      "padding-bottom": "4px"
+                                    }
+                                  },
+                                  {
+                                    "elmType": "div",
+                                    "txtContent": "[$WorkFax]",
+                                    "style": {
+                                      "font-size": "15px"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "style": {
+                          "display": "inline-block"
+                        }
+                      }
+                    ],
+                    "style": {
+                      "border-bottom": "1px solid lightgray",
+                      "margin-bottom": "17px"
+                    }
+                  },
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "width": "100%",
+                          "margin-bottom": "17px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "attributes": {
+                              "iconName": "MapPin",
+                              "class": "ms-fontColor-neutralPrimary"
+                            },
+                            "style": {
+                              "font-size": "16px",
+                              "margin": "auto 20px auto 0",
+                              "opacity": "0.75"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "style": {
+                              "flex-grow": "1",
+                              "display": "inline-block"
+                            },
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "Address",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$WorkAddress]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "display": "flex",
+                          "margin-bottom": "17px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "City",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$WorkCity]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ],
+                            "style": {
+                              "display": "inline-block",
+                              "margin": "0 auto 0 38px"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "State",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$WorkState]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ],
+                            "style": {
+                              "display": "inline-block",
+                              "margin": "0 auto"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "children": [
+                              {
+                                "elmType": "div",
+                                "txtContent": "Zip Code",
+                                "style": {
+                                  "font-size": "12px",
+                                  "color": "#4a4a4a",
+                                  "padding-bottom": "4px"
+                                }
+                              },
+                              {
+                                "elmType": "div",
+                                "txtContent": "[$WorkZip]",
+                                "style": {
+                                  "font-size": "15px"
+                                }
+                              }
+                            ],
+                            "style": {
+                              "display": "inline-block",
+                              "margin": "0 5px 0 auto"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "Country",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#4a4a4a",
+                              "padding-bottom": "4px"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$WorkCountry]",
+                            "style": {
+                              "font-size": "15px"
+                            }
+                          }
+                        ],
+                        "style": {
+                          "display": "inline-block",
+                          "margin-left": "38px",
+                          "padding-bottom": "17px"
+                        }
+                      }
+                    ],
+                    "style": {
+                      "margin-bottom": "17px",
+                      "border-bottom": "1px solid lightgray"
+                    }
+                  },
+                  {
+                    "elmType": "div",
+                    "style": {
+                      "display": "flex",
+                      "width": "100%",
+                      "padding-bottom": "17px",
+                      "margin-bottom": "17px",
+                      "border-bottom": "1px solid lightgray"
+                    },
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "attributes": {
+                          "iconName": "Website",
+                          "class": "ms-fontColor-neutralPrimary"
+                        },
+                        "style": {
+                          "font-size": "16px",
+                          "margin": "auto 20px auto 0",
+                          "opacity": "0.75"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "flex-grow": "1",
+                          "display": "inline-block"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "Webpage",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#4a4a4a",
+                              "padding-bottom": "4px"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$WebPage]",
+                            "style": {
+                              "font-size": "15px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elmType": "div",
+                    "style": {
+                      "display": "flex",
+                      "width": "100%",
+                      "padding-bottom": "17px",
+                      "margin-bottom": "17px",
+                      "border-bottom": "1px solid lightgray"
+                    },
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "attributes": {
+                          "iconName": "DietPlanNotebook",
+                          "class": "ms-fontColor-neutralPrimary"
+                        },
+                        "style": {
+                          "font-size": "16px",
+                          "margin": "auto 20px auto 0",
+                          "opacity": "0.75"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "flex-grow": "1",
+                          "display": "inline-block"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "Notes",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#4a4a4a",
+                              "padding-bottom": "4px"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$Notes]",
+                            "style": {
+                              "font-size": "15px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elmType": "div",
+                    "style": {
+                      "display": "flex",
+                      "width": "100%",
+                      "padding-bottom": "17px"
+                    },
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "attributes": {
+                          "iconName": "Mail",
+                          "class": "ms-fontColor-neutralPrimary"
+                        },
+                        "style": {
+                          "font-size": "18px",
+                          "margin": "auto 20px auto 0",
+                          "opacity": "0.75"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "flex-grow": "1",
+                          "display": "inline-block"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "Email",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#4a4a4a",
+                              "padding-bottom": "4px"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "[$EMail]",
+                            "style": {
+                              "font-size": "15px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "style": {
+                  "font-size": "14px",
+                  "padding": "8px 25px",
+                  "width": "400px",
+                  "color": "black",
+                  "background-color": "#f2f2f2",
+                  "display": "block"
+                }
+              },
+              "openOnEvent": "click",
+              "directionalHint": "rightCenter",
+              "isBeakVisible": true,
+              "beakStyle": {
+                "backgroundColor": "#f2f2f2"
+              }
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$JobTitle]",
+            "style": {
+              "color": "#4a4a4a",
+              "margin-top": "7.5px"
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$WorkPhone]",
+            "style": {
+              "color": "#4a4a4a",
+              "margin-top": "7.5px"
+            }
+          }
+        ]
+      },
+      {
+        "elmType": "a",
+        "style": {
+          "margin-left": "auto",
+          "margin-right": "0",
+          "padding": "5px"
+        },
+        "attributes": {
+          "href": {
+            "operator": "+",
+            "operands": [
+              "mailto:",
+              "[$EMail]"
+            ]
+          }
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "style": {
+              "font-size" : "25px",
+              "opacity" : "0.7",
+              "margin-right": "5px"
+            },
+            "attributes": {
+              "iconName": "Mail",
+              "class": "ms-fontColor-neutralPrimary"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
