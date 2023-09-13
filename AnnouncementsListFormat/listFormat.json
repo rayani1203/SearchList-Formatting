@@ -1,1 +1,91 @@
-
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
+  "hideSelection": true,
+  "hideColumnHeader": true,
+  "rowFormatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "=if([$AnnouncementType] == 'Alert', 'sp-row-card sp-css-backgroundColor-BgCoral30','sp-row-card sp-css-backgroundColor-blueBackground07')"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "text-align": "left",
+          "width": "100%"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "ms-fontColor-blueMid ms-fontWeight-semibold"
+            },
+            "txtContent": "[$Title]"
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-row-listPadding"
+            }
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "padding-top": "5px",
+              "padding-bottom": "30px"
+            },
+            "attributes": {
+              "class": "sp-row-title"
+            },
+            "txtContent": "[$CoverTitle]"
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "display": "flex",
+              "width": "100%"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": ""
+                },
+                "txtContent": "=LEFT([$ReadMore], 2)"
+              },
+              {
+                "elmType": "a",
+                "style": {
+                  "text-align": "right",
+                  "margin-left": "auto",
+                  "text-decoration": "none"
+                },
+                "attributes": {
+                  "class": "ms-fontColor-blueMid ms-fontWeight-semibold",
+                  "href": "[$ReadMore]"
+                },
+                "txtContent": "Read More"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "style": {
+      "display": {
+        "operator": "?",
+        "operands": [
+          {
+            "operator": ">",
+            "operands": [
+              "[$Date]",
+              "7/7/2023"
+            ]
+          },
+          "none",
+          ""
+        ]
+      }
+    }
+  }
+}
